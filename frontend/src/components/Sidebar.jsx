@@ -1,7 +1,7 @@
 import { NavLink, useLocation } from 'react-router-dom';
 import {
   LayoutDashboard, CheckSquare, Calendar, MessageSquare,
-  Settings, Leaf, Bot
+  Settings, Leaf
 } from 'lucide-react';
 
 const navItems = [
@@ -57,36 +57,7 @@ export default function Sidebar({ onClose, aiStatus }) {
           </NavLink>
         ))}
       </nav>
-
-      {/* Footer */}
-      <div className="sidebar-footer">
-        <div style={{
-          display: 'flex', alignItems: 'center', gap: 'var(--space-2)',
-          fontSize: 'var(--text-xs)', color: 'var(--clr-ink-4)',
-        }}>
-          <Bot size={14} aria-hidden="true" />
-          <span>
-            {aiStatus?.available
-              ? `AI: ${aiStatus.provider}`
-              : 'Rule-based mode'}
-          </span>
-          <span
-            style={{
-              marginLeft: 'auto',
-              width: 6, height: 6,
-              borderRadius: '50%',
-              background: aiStatus?.available ? 'var(--clr-success)' : 'var(--clr-ink-4)',
-            }}
-          />
-        </div>
-        <div style={{
-          marginTop: 'var(--space-2)',
-          fontSize: 'var(--text-xs)',
-          color: 'var(--clr-ink-4)',
-        }}>
-          Hackathon — Simulated Alexa+ Experience
-        </div>
-      </div>
     </aside>
   );
 }
+
