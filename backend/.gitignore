@@ -1,0 +1,25 @@
+# Environment files
+.env
+!.env.example
+
+# SQLite Database
+*.db
+*.sqlite
+*.sqlite3
+planwise.db*
+
+# Python cache & virtual environments
+__pycache__/
+*.py[cod]
+*$py.class
+.pytest_cache/
+.coverage
+htmlcov/
+venv/
+.venv/
+env/
+
+# IDE / Editor
+.vscode/
+.idea/
+*.swp
